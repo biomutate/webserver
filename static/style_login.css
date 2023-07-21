@@ -1,0 +1,81 @@
+.bg-nav {
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar a {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.heading h3 {
+    position: relative;
+    color: #2af731;
+    margin-left: 35rem;
+    margin-top: 4rem;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.heading p {
+    position: relative;
+    color: white;
+    margin-left: 35rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.card {
+    width: 500px;
+    height: 200px;
+    margin-top: 3rem;
+    margin-left: 26rem;
+}
+
+.card-body p {
+    margin-top: 1rem;
+}
+
+.login100-form-title {
+  font-size: 20px;
+  color: #403866;
+  line-height: 1.2;
+  text-align: flex;
+  width: 100%;
+  display: block;
+  margin-bottom: -2rem;
+}
+
+.input100 {
+  color: #403866;
+  line-height: 1.2;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 40px;
+  padding: 0 20px 0 10px;
+}
+
+.login100-form-btn {
+    font-size: 1.3rem;
+    background-color: #1c6ced; /* Sets the background color of the button to blue */
+    transition: background-color 0.3s ease; /* Adds a slight hover effect */
+    border-radius: 5px;
+    width: 120px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.login100-form-btn:hover {
+    background-color: #2af731; /* Changes the background color on hover */
+}
+
+.flex-sb-m p {
+    font-size: 1.2rem;
+    margin-bottom: -1rem;
+}
