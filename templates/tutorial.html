@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title> Tutorial | BioMutate</title>
+  <link rel="stylesheet" href="../static/tutorial.css">
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body oncontextmenu="return false">
+  <!-- Header Design -->
+  <header class="header">
+    <a href="/" class="logo"> BioMutate.</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <nav class="navbar">
+      <a href="{{ url_for('index')}}">Home</a>
+      <a href="{{ url_for('about')}}">About</a>
+      <a href="#faq">Theory Corner</a>
+      <a href="{{ url_for('tutorial')}}" class="active">Tutorial</a>
+      <a href="{{ url_for('contact_us')}}">Contact Us</a>
+      <a href="{{ url_for('login')}}">Login</a>
+    </nav>
+  </header>
+
+  <section class="basic" id="basic">
+    <h2 class="heading">BioMutate <span>Tutorial</span></h2>
+
+    <div class="basic-content">
+        <h3>Ever wondered if you can optimise the process of species evolution? Predict the future mutations in a species?
+        With BioMutate, it's totally possible!!!</h3>
+    </div>
+
+    <h2 class="heading1">Step <span>-by-</span> Step Guide</h2>
+  </section>
+
+  <section class="s" id="s">
+    <h3>Click on individual Steps to know the details about how to perform the calculation</h3>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-timeline">
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step1.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onclick="openModal1()" id="step1">Step 1.</span>
+                  <h3 class="title h4">Downloading the Dataset</h3>
+                  <p class="description">
+                    Follow this step to download the necessary dataset (protein and genomic sequences) from different databases.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step2.png" class="img" /></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal2()" id="step2">Step 2.</span>
+                  <h3 class="title h4">Dataset Preprocessing</h3>
+                  <p class="description">
+                    Follow this step to preprocess the raw data that you downloaded in step 1. To know about the theoretical
+                    background of how we are preprocessing the dataset, please go through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step3.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal3()" id="step3">Step 3.</span>
+                  <h3 class="title h4">Entropy Calculation</h3>
+                  <p class="description">
+                    Follow this step to calculate the entropy of the viral strain using its protein or genomic sequence. The
+                    entropy is calculated using the Shannon's entropy formula. To know more about the theoretical background
+                    of the entropy calculation please go through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step4.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal4()" id="step4">Step 4.</span>
+                  <h3 class="title h4">Calculating MRF</h3>
+                  <p class="description">
+                    Follow this step to calculate the Mutational Response Function (MRF) of the viral strain. MRF is new
+                    mathematical quantity developed by us. To know more about the MRF you can go through the following
+                    <a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.2c04574" target="_blank">paper</a> or please go
+                    through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step5.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal5()" id="step5">Step 5.</span>
+                  <h3 class="title 4">Feature Calculation</h3>
+                  <p class="description">
+                    Follow this step to calculate the Features for the model training. We have defined four features for
+                    the model training. These are: Pair Predictibility of Amino Acid (PPAA), Distribution Probability of
+                    Amino Acids (DPAA), Future Composition of Amino Acids (FCAA) and Entropy Calculation of Amino Acids (ECAA).
+                    To know more about the mathematical background of the features please go through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step6.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal6()" id="step6">Step 6.</span>
+                  <h3 class="title h4">Model Training</h3>
+                  <p class="description">
+                    Follow this step to train the Feedforward Machine Learning Model. You can select the appropriate
+                    hyperparameters for the model training. To know more about the hyperparameters of the model, please
+                    go through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step7.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal7()" id="step7">Step 7.</span>
+                  <h3 class="title h4">Model Testing</h3>
+                  <p class="description">
+                    Follow this step to perform the model predictions on the new sequences. You can feed in the protein
+                    sequence and let your model predict the probable mutational residues. To know more about how to interpret
+                    the model prediction, please go through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-content">
+                <div class="circle"><span class="homebox"><img src="../static/images/step8.png" class="img"></span></div>
+                <div class="content">
+                  <span class="year" onClick="openModal8()" id="step8">Step 8.</span>
+                  <h3 class="title h4">Analysis</h3>
+                  <p class="description">
+                    Follow this step to perform the model analysis. The analysis is performed in terms of Accuracy, Recall,
+                    Sensitivity etc. To know more about the model analytics, please go through the Theory Corner.
+                  </p>
+                  <div class="icon"><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="myModal1" class="modal">
+      <div class="modal-content">
+          <span class="close1">&times;</span>
+          <h3>Step 1: Downloading the Dataset</h3>
+          <p>In this step, you will need to download a dataset of protein/genomic sequences either from the National
+            Center for Biotechnology Information, Virus Database NCBI Virus or the Global Initiative on Sharing Avian
+            Influenza Data GISAID. NCBI and GISAID are two major databases for accessing genetic sequence data, and you
+            can choose either one based on the specific research question you are trying to answer.</p>
+          <br>
+          <p>To download the dataset, you will need to navigate to the <a href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/" target="_blank">NCBI Virus </a>
+            or <a href="https://gisaid.org/" target="_blank">GISAID </a>website and search for the
+            dataset you want to download. You can filter the search results based on the specific criteria you are
+            interested in, such as the type of virus or the geographic region. Once you have found the dataset you want
+            to download, you can download it in a compressed file format, such as .fasta or .fastq</p>
+          <br>
+          <p>In our previous <a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.2c04574" target="_blank">work </a>we
+            downloaded the protein data from NCBI Virus, in a month-wise manner, by selecting certain filters. Follow
+            the following steps to download the data in a month-wise manner</p>
+
+          <div id="popup-content">
+            <div id="block-container">
+              <div class="block">
+                <h4>NCBI Virus Database to Download Protein Sequence</h4>
+                <p>(A) Go to NCBI Virus dashboard</p>
+                <br>
+                <p>(B)Click on the Country for which you want to download the data. In this case we select India and
+                  then scroll up and select All Proteins</p>
+                <br>
+                <p>(C) Here you will find the details of all the viral proteins in that country. From the left panel
+                  select filters to narrow down the search to a specific variant. Click on Nucleotide Completeness and
+                  select Complete. This step makes sure that you are using a complete sequence and not a partial or
+                  incomplete sequence</p>
+                <br>
+                <p>(D) Once you have selected the complete sequence, click on Pango Lineage to select the variant of
+                  interest. In this case we are selecting the Delta Variant (B.1.617.2). Make sure that you enter the
+                  variant ID and not the generic name of the variant.</p>
+                <br>
+                <p>(E) Once you have selected the variant of your choice, then click on Proteins. Here you can select
+                  which viral protein you would like to investigate. In this case we have selected the Surface
+                  Glycoprotein of Delta Variant</p>
+                <br>
+                <p>(F) Click on Collection Date to display the sequences in a month wise manner</p>
+                <br>
+                <p>(G) Finally to download the sequences click on Download and proceed with the default options</p>
+              </div>
+              <div class="block">
+                <h4>GISAID Database to Download Genomic Sequence</h4>
+                <p>You need to make an account in GISAID first. Go to GISAID and in the top right corner click on Log
+                  In. Create an account and once you log in you will see the home page</p>
+                <br>
+                <p>(A) Make sure you are on the EpiCov tab. Click on the Viral structure of SARS-CoV-2 and it will take
+                  you to the working dashboard</p>
+                <br>
+                <p>(B) Once you are on the working dashboard navigate to Location tab. Here you can search the genomic
+                  sequence based on the countries. But there is a format that you need to use to search. First type the
+                  name of the Continent followed by a space and then a Forward Slash, followed by the name of the country.
+                  For example if we need to search sequences from India then we will type Asia / India</p>
+                <br>
+                <p>(C) After searching for the country of choice, navigate to the right side to select three important
+                  features: Complete, High Coverage and Collection Date Complete. Selecting Complete assures that the
+                  sequences that you will be getting are not incomplete or broken. Selecting High Coverage affirms that
+                  the genomic sequences that will be displayed has less amount of unrecognised base pairs i.e. low value
+                  of N's (<1% N and <0.05% mutations). And finally selecting Collection Date Complete allows the server
+                  to give you entries with complete collection date.</p>
+                <br>
+                <p>(D) Once the filters are selected then you can navigate to Lineage tab to select the variant of your
+                  choice. For example if we want to download the genomic sequence of Delta variant then in the Lineage
+                  tab we will type the ID of the Delta variant (i.e. B.1.617.2).</p>
+                <br>
+                <p>(E) Once you have selected the variant of interest then you can navigate to the Collection Date and
+                  collect the sequences in a month wise manner</p>
+                <br>
+                <p>(F) After performing the above steps you will get the refined sequences in a month-wise manner. To
+                  download the sequences you can click on the Square Box on the left side of Virus Name tab. This will
+                  select all the sequences in the entry and then you can navigate to the bottom right and click on the
+                  Download button to download the dataset. Once you click on Download a new window will pop up asking
+                  you to select the format of the dataset. Click on Nucleotide Sequences (FASTA) to download the dataset
+                  in FASTA format and then click on Download. Then you will be asked to accept the terms and conditions
+                  of GISAID database. Click on I agree to the terms and conditions and then click Download.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <div id="myModal2" class="modal">
+      <div class="modal-content">
+          <span class="close2">&times;</span>
+          <h3>Step 2: Dataset Preprocessing</h3>
+          <p>(A) After downloading the dataset it is important to preprocess it as the raw data consists of many junk and
+            broken data.To preprocess the data click on Preprocessing tab from the main menu and then upload the sequence
+            file that you have downloaded in previous tep in FASTA format. Click on Submit after which you will get your
+            preprocessed data. To know more about what exactly the server does in preprocessing please visit the Theory
+            Corner.</p>
+          <br>
+          <p>(B) If you are unsure about which data file or what type of datafile you need to upload, you click on Load
+            Example and then click on Submit. Once the preprocessing is done, you can download the file and then view
+            it to understand the file type and its architecture.</p>
+      </div>
+  </div>
+
+  <div id="myModal3" class="modal">
+      <div class="modal-content">
+          <span class="close3">&times;</span>
+          <h3>Step 3: Entropy Calculation</h3>
+          <p>(A) After you have preprocessed the data the first thing that we need to do is to calculate the entropy.</p>
+          <br>
+          <p>(B) Before you can calculate the Mutational entropy, you need to have the alignment file with you for the
+          preprocessed data. You can visit <a href="https://mafft.cbrc.jp/alignment/server/" target="_blank">MAFFT Server</a>
+            to perform the Multiple Sequence Alignment and Download the alignment file.</p>
+          <br>
+          <p>(C) On the MAFFT Server, upload your preprocessed FASTA file by clicking on "Choose File" and then click on "Submit".
+            You can either keep the deafult values as it is or can change it according to your own need. Once the alignment is
+            done, you can download the alignment file (.aln) from the top left corner by clicking on "Clustal Format".</p>
+          <br>
+          <p>(D) Upload the clustal alignment file (.aln) in our webserver and click on "Submit". You will get the desired output
+          in the form of Mutational Entropy graph</p>
+          <br>
+          <p>(E) If you are unsure about which data file or what type of datafile you need to upload, you can click on Load
+            Example and then click on Submit. Once the preprocessing is done, you can download the file and then view
+            it to understand the file type and its architecture.</p>
+          <br>
+          <p>(F) In the output you will get the graph of Entropy vs Residue number. This graph depicts the Mutational Entropy
+          of each residue in the viral strain</p>
+      </div>
+  </div>
+
+  <div id="myModal4" class="modal">
+      <div class="modal-content">
+          <span class="close4">&times;</span>
+          <h3>Step 4: Mutational Response Function</h3>
+          <p>(A) After calculating the Entropy of the genomic/protein sequence you need to supply the data file in order
+          to calculate the MRF</p>
+          <br>
+          <p>(B) When you download the entropy data in the previous step you will get a CSV file. If you look at the
+          architecture of the CSV file you will see that the first column of the CSV file is the "Residue Position" and the
+          second column is the "Entropy". You need to prepare the correct data in order to calculate the MRF as well</p>
+          <br>
+          <p>(C) The CSV file should have the following architecture: The first column will correspond to "Residue Position",
+            The second column will correspond to "Entropy" of a particular month. Depending upon the average month that
+            you are going to take (default is 3), you need to increase or decrease the number of months. So if you want
+            to calculate the MRF for 5 months, for example, then the first column will be "Residue Position" and then second,
+            third, fourth, fifth and sixth columns will correspond to the entropy of the individual months</p>
+          <br>
+          <p>(D) You can download the example file to see the architecture of the file.</p>
+          <br>
+      </div>
+  </div>
+
+  <div id="myModal5" class="modal">
+      <div class="modal-content">
+          <span class="close5">&times;</span>
+          <h3>Step 5: Feature Calculation</h3>
+          <p>This step is totally different from the previous steps as in this step you will be calculating the features
+            necessary to train the model. There are four major features that you are required to calculate in order to
+            train the model</p>
+          <br>
+
+          <div id="popup-content">
+            <div id="block-container">
+              <div class="block1">
+                <h4>Feature 1: Pair Predictability of Amino Acids</h4>
+                <p>(A) To calculate this feature click on "Feature 1" on the left panel in your dashboard</p>
+                <br>
+                <p>(B) Upload the preprocessed fasta sequence file and click on "Submit" and this will calculate the Feature 1 of all the
+                  sequences present in your fasta file</p>
+                <br>
+                <p>(C) In the output you will get a zip file to download. Download the zip file and extract it. The folder will consists of
+                  CSV files named based on the sequences's Accession ID</p>
+                <br>
+                <p>(D) The architecture of the CSV file will correspond to Residue Position in first column and Feature 1 for each amino acid
+                  in second column</p>
+                <br>
+                <p>To know more about the mathematical background of the Feature 1, please go through the Theory Corner</p>
+              </div>
+              <div class="block1">
+                <h4>Feature 2: Distribution Probability of Amino Acids</h4>
+                <p>(A) To calculate this feature click on "Feature 2" on the left panel in your dashboard</p>
+                <br>
+                <p>(B) Upload the preprocessed fasta sequence file and click on "Submit" and this will calculate the Feature 2 of all the
+                  sequences present in your fasta file</p>
+                <br>
+                <p>(C) In the output you will get a zip file to download. Download the zip file and extract it. The folder will consists of
+                  CSV files named based on the sequences's Accession ID</p>
+                <br>
+                <p>(D) The architecture of the CSV file will correspond to Residue Position in first column and Feature 2 for each amino acid
+                  in second column</p>
+                <br>
+                <p>To know more about the mathematical background of the Feature 2, please go through the Theory Corner</p>
+              </div>
+              <div class="block1">
+                <h4>Feature 3: Future Composition of Amino Acids</h4>
+                <p>(A) To calculate this feature click on "Feature 3" on the left panel in your dashboard</p>
+                <br>
+                <p>(B) Upload the preprocessed fasta sequence file and click on "Submit" and this will calculate the Feature 3 of all the
+                  sequences present in your fasta file</p>
+                <br>
+                <p>(C) In the output you will get a zip file to download. Download the zip file and extract it. The folder will consists of
+                  CSV files named based on the sequences's Accession ID</p>
+                <br>
+                <p>(D) The architecture of the CSV file will correspond to Residue Position in first column and Feature 3 for each amino acid
+                  in second column</p>
+                <br>
+                <p>To know more about the mathematical background of the Feature 3, please go through the Theory Corner</p>
+              </div>
+              <div class="block1">
+                <h4>Feature 4: Entropy Calculation of Amino Acids</h4>
+                <p>(A) To calculate this feature click on "Entropy Calculation" on the left panel in your dashboard</p>
+                <br>
+                <p>(B) Upload the preprocessed fasta sequence file and click on "Submit" and this will calculate the Feature 4 of all the
+                  sequences present in your fasta file</p>
+                <br>
+                <p>(C) In the output you will get a zip file to download. Download the zip file and extract it. The folder will consists of
+                  CSV files named based on the sequences's Accession ID</p>
+                <br>
+                <p>(D) The architecture of the CSV file will correspond to Residue Position in first column and Feature 4 for each amino acid
+                  in second column</p>
+                <br>
+                <p>To know more about the mathematical background of the Feature 4, please go through the Theory Corner</p>
+              </div>
+              <div class="block1">
+                <h4>Phylogenetic Calculation</h4>
+                <p>(A) Once all the features are calculated, you need to perform a phylogenetic analysis in order to get the
+                target class labels</p>
+                <br>
+                <p>(B) To perform the phylogenetic analysis, you need to first get the phylogenetic tree. To get the phylogfenetic
+                tree, upload the preprocessed fasta sequence file in <a href="https://mafft.cbrc.jp/alignment/server/" target="_blank">MAFFT Server</a>
+                and then click on "Submit"</p>
+                <br>
+                <p>Once you get the output page, click on "Phylogenetic Tree" option</p>
+                <br>
+                <p>Once you click on "Phylogenetic Tree" option a new page will open up. Keep the parameters at their default values
+                unless you want to change anything. Once you have decided on the parameters then click on "Go!"</p>
+                <br>
+                <p>Once you click on "Go!" a new window will come up. Click on "View Tree on Phylo.io" to view the phylogenetic tree</p>
+                <br>
+                <p>Then visit the <a href="https://github.com/psychedelic2007/biohub_webserver/tree/main/local_calculation" target="_blank">Local Calculation</a>
+                  directory of the official GitHub page of the webserver</p>
+                <br>
+                <p>Download the "phylogenetic_calculation.py" python file in your local computer and run the code</p>
+                <br>
+                <p>When prompted to enter the first sequence, then type the Accession ID of the root sequence (parent) and press enter.
+                  When prompted to enter the second sequence, then type the Accession ID of the branch sequence (daughter) and press enter.
+                  Make sure to change the "fasta_file_path" to a folder where you would like to save the files.
+                </p>
+                <br>
+                <p>To know more about how to calculate the root sequence (parent) and branch sequence (daughter) please visit the Theory corner</p>
+              </div>
+            </div>
+          </div>
+          <p>Once you have calculated all the necessary features and performed the phylogenetic analysis again visit the
+            <a href="" target="_blank">Local Calculation</a> directory of the official GitHub page of the webserver and download the
+            python files starting with "combine" and then run them in your local computer to generate the combined files which will
+            be the training dataset for the model</p>
+          <br>
+          <p>To know more about how to run the python codes, visit the "README.md" file in the "Local Calculation" directory</p>
+      </div>
+  </div>
+
+  <div id="myModal6" class="modal">
+      <div class="modal-content">
+          <span class="close6">&times;</span>
+          <h3>Step 6: Model Training</h3>
+          <p>(A) After calculating the features for the preprocessed sequences you need to supply a zip file for the model training</p>
+          <br>
+          <p>(B) To create a zip file, copy all of your final CSV files consisting of only 5 columns: Feature 1, Feature 2, Feature 3,
+          Feature 4 and Target, in a folder and compress the folder with ".zip" extension</p>
+          <br>
+          <p>(C) Upload the zip folder in the webserver by clicking on "Upload" button</p>
+          <br>
+          <p>(D) After uploading the zip file you need to play around with the hyperparameters of the model. You will be prompted to select
+          the following hyperparameters: Learning Rate, Number of Hidden Layers, Number of Neurons in each Hidden Layer, Activation
+          Function, Number of Epochs, Percentage of Training Data. Each of these hyperparameters will be showing the range in which
+          you can select the values</p>
+          <br>
+          <p>(E) To know more about the hyperparameters please visit the Theory Corner</p>
+          <br>
+          <p>(F) Once you have selected the hyperparameters, then click on "Submit" and it will start your model training</p>
+          <br>
+          <p>After the model is trained you will get the training data and all the relevant graphs that you can download along with
+          the trained models as well</p>
+      </div>
+  </div>
+  <div id="myModal7" class="modal">
+      <div class="modal-content">
+          <span class="close7">&times;</span>
+          <h3>Step 7: Model Testing</h3>
+          <p>After performing the model training you need to upload the trained model as well as the new sequence on
+            which you want to perform the prediction in order to perform model calculation</p>
+          <br>
+      </div>
+  </div>
+  <div id="myModal8" class="modal">
+      <div class="modal-content">
+          <span class="close8">&times;</span>
+          <h3>Step 8: Model Analysis</h3>
+          <p>From the download data you can perform the model analysis by going through the graphs and other related datas. To know more
+          about model metrics and how to interpret the data, please visit Theory Corner</p>
+          <br>
+      </div>
+  </div>
+
+
+  <!-- Update Step 1 with a click event listener -->
+  <script src="../static/js/tutorial.js"></script>
+
+</body>
+</html>

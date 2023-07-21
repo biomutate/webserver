@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMutate</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- box-icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-lGqSJCCeAukA6pDdcuX+iQi5L+w2Kg71Z4icCn6UHZzG9Ktfw7V6+HqKKe7W+IwmPf8Rpqtk5+D7Mu+Mg2bUng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body oncontextmenu="return false">
+    <!-- Header Design -->
+    <header class="header">
+        <a href="/" class="logo"> BioMutate.</a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="{{ url_for('index')}}" class="active">Home</a>
+            <a href="{{ url_for('about')}}">About</a>
+            <a href="#faq">Theory Corner</a>
+            <a href="{{ url_for('tutorial')}}">Tutorial</a>
+            <a href="{{ url_for('contact_us')}}">Contact Us</a>
+            <a href="{{ url_for('login')}}">Login</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+    <div class="about-img">
+        <img src="../static/images/final_cov.gif" alt="gif-image" class="gif-image">
+        <span class="circle-spin"></span>
+    </div>
+
+    <div class="home-part">
+        <div class="home-content">
+            <h2>BioMutate</h2>
+            <p>Your One Stop Shop For Mutation Prediction</p>
+
+            <div class="btn-box">
+                <a href="/about" class="btn">About BioMutate</a>
+                <a href="/login" class="btn">Try For Free</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- basic definition -->
+    <section class="basic" id="basic">
+    <h2 class="heading">Automate the <span>Mutational Analysis process</span></h2>
+
+    <div class="basic-content">
+        <h3>Ever wondered if you can optimise the process of species evolution? Predict the future mutations in a species?
+        With BioMutate, it's totally possible!!!</h3>
+    </div>
+
+    <div class="basic-text">
+        <div class="text-box">
+            <h2>With BioMutate <span>You Can</span></h2>
+            <p><span class="typing-text"></span></p>
+        </div>
+
+        <div class="box-screen">
+            <img src="../static/images/spike.tif" alt="Spike" class="spike-image">
+        </div>
+    </div>
+    </section>
+
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <h2 class="heading">How It <span>Works</span></h2>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bxs-file'></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bxs-cog'></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bx-bar-chart'></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bxs-file'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes-container">
+                <div class="box">
+                    <h3>Upload your Sequence</h3>
+                    <p>Upload your raw MSA file in FASTA format</p>
+                </div>
+                <div class="box">
+                    <h3>Data Preprocessing</h3>
+                    <p>Let BioMutate preprocess your data</p>
+                </div>
+                <div class="box">
+                    <h3>Mutational Entropy</h3>
+                    <p>Calculate the mutational entropy</p>
+                </div>
+                <div class="box">
+                    <h3>Feature Selection</h3>
+                    <p>Select the training features for the model training</p>
+                </div>
+            </div>
+            <div class="card-wrapper1">
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bx-dna' ></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bxs-analyse' ></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <a href="#"><i class='bx bx-network-chart'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes-container1">
+                <div class="box">
+                    <h3>Map Onto Structure</h3>
+                    <p>Map the Mutations on Crystal Structure</p>
+                </div>
+                <div class="box">
+                    <h3>Analyse</h3>
+                    <p>Analyse your data</p>
+                </div>
+                <div class="box">
+                    <h3>Model Training</h3>
+                    <p>Let BioMutate train your model</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    <h2 class="heading">Software <span>Used</span></h2>
+    </div>
+    <div class="container-new">
+        <div class="card-new">
+            <h3 class="title"><a href="https://biopython.org/" target="_blank">BioPython</a> </h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/biopython.png" alt="BioPython">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/Pandas_logo.svg" alt="Pandas">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://numpy.org/" target="_blank">NumPy</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/NumPy_logo_2020.svg" alt="NumPy">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://scipy.org/" target="_blank">SciPy</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/scipy.png" alt="SciPy">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://scikit-learn.org/stable/" target="_blank">Scikit-learn</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/sklearn.png" alt="Sklearn">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://matplotlib.org/" target="_blank">Matplotlib</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/matplotlib.svg" alt="Matplotlib">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://seaborn.pydata.org/" target="_blank">Seaborn</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/seaborn.png" alt="Seaborn">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://mafft.cbrc.jp/alignment/server/" target="_blank">MAFFT</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/mafft.png" alt="MAFFT">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://networkx.org/" target="_blank">NetworkX</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/networkx_logo.svg" alt="NetworkX">
+            </div>
+        </div>
+        <div class="card-new">
+            <h3 class="title"><a href="https://plotly.com/" target="_blank">Plotly</a></h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="circle">
+                <img class="card-image" src="../static/images/Plotly-logo.png" alt="Plotly">
+            </div>
+        </div>
+    </div>
+
+    <section class="ready" id="ready">
+        <h2 class="heading">Ready to Understand the <span>Mutational Evolution?</span></h2>
+        <h3>Experience a New Way to explore Mutations. Make your experience worthwhile</h3>
+
+        <div class="try-box">
+            <a href="{{ url_for('login')}}" class="btn">Try For Free</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-logo">BioMutate</span>
+                <br>
+                <span class="footer-copyright">&copy; 2023 BioMutate</span>
+                <br>
+                <span class="footer-copyright1"><a href="https://www.drsusmitaroy.com/" target="_blank">Dr. Susmita Roy's Group</a>. All rights reserved</span>
+            </div>
+
+            <div class="footer-links">
+                <a href="#faq" onclick="openPopup('FAQ')">FAQ |</a>
+                <a href="{{ url_for('contact_us')}}">Contact |</a>
+                <a href="#policy" onclick="openPopup('Policy')">Policy |</a>
+                <a href="#terms" onclick="'openPopup('Terms & Conditions')">Terms and Conditions |</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="popup-overlay-faq"></div>
+    <div id="popup-container-faq">
+        <div id="popup-header-faq">
+            <span id="popup-close-faq" onclick="closePopup('faq')" style="font-size: 20px;">&times;</span>
+        </div>
+        <div id="popup-content-faq">
+            <h3>FAQs</h3>
+            <br>
+            <h4>Is ARIAS Free?</h4>
+            <p>ChatPDF allows you to use it for free with 4 PDFs every day, each up to 150 pages. For more,
+                you can upgrade to the Pro plan for $5 per month. For additional information, check the pricing page.</p>
+            <br>
+            <h4>What about the privacy of my files?</h4>
+            <p>ARIAS never shares your file with anyone. They are stored on a secure cloud storage and can be deleted anytime.</p>
+        </div>
+    </div>
+
+
+    <!-- All major javascripts -->
+
+    <!-- typed.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

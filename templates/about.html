@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title> About | BioMutate</title>
+  <link rel="stylesheet" href="../static/about.css">
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body oncontextmenu="return false">
+  <!-- Header Design -->
+  <header class="header">
+    <a href="/" class="logo"> BioMutate.</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <nav class="navbar">
+      <a href="{{ url_for('index')}}">Home</a>
+      <a href="{{ url_for('about')}}" class="active">About</a>
+      <a href="#faq">Theory Corner</a>
+      <a href="{{ url_for('tutorial')}}">Tutorial</a>
+      <a href="{{ url_for('contact_us')}}">Contact Us</a>
+      <a href="{{ url_for('login')}}">Login</a>
+    </nav>
+  </header>
+
+  <section class="basic" id="basic">
+    <h2 class="heading">About <span>BioMutate</span></h2>
+
+    <div class="basic-content">
+      <h3>Ever wondered if you can optimise the process of species evolution? Predict the future mutations in a species?
+        With BioMutate, it's totally possible!!!</h3>
+      <p>Welcome to our website, dedicated to streamlining the process of viral surveillance and prediction of
+        future mutations. Our website is designed to help biologists predict the epidemiological existence of a species and
+        the growth trajectory that the organism can take. Our statistical-mechanics guided machine learning model, along with
+        the Mutational Response Function, allows us to predict the phase transition of any virus from its ancestor to offspring.</p>
+      <br>
+      <p>At our website, users can upload their sequence data in fasta format, and our platform will handle the preprocessing
+        without any hassle or manual labor. Our platform also provides feature calculation, enabling users to build their
+        own multilayer perceptron architecture and train the model to predict future mutational residues. This allows users
+        to create custom models that can predict the future mutations of a virus with great accuracy.</p>
+      <br>
+      <p>The Mutational Response Function is a parameter that we have extensively developed to predict the phase transition
+        of any virus from its ancestor to offspring. By using this function, users can calculate the probability of a
+        particular mutation occurring, and this allows them to predict the future trajectory of the virus.</p>
+      <br>
+      <p>Our website is designed to provide a streamlined flow to users, especially biologists, allowing them to predict the
+        future of a virus with greater accuracy and ease. We are committed to providing the best possible tools to help our
+        users make informed decisions about viral surveillance and management.</p>
+    </div>
+  </section>
+
+  <section class="people" id="people">
+    <h2 class="heading">Meet the <span>Team</span></h2>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="../static/images/ss.jfif" alt="Team Member 1" class="member-image" style="max-width:100%; height:70%;">
+        <h3>Satyam Sangeet</h3>
+        <h4>Lead Developer</h4>
+        <div class="social-media-icons">
+          <a href="https://www.researchgate.net/profile/Satyam-Sangeet" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="https://scholar.google.com/citations?user=GgF3yTYAAAAJ&hl=en" target="_blank"><i class="fab fa-google"></i></a>
+          <a href="https://linkedin.com/in/satyam-sangeet-a8a604119" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/psychedelic2007" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://orcid.org/0000-0002-8274-6775" target="_blank"><i class="fab fa-orcid"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="../static/images/sr.png" alt="Team Member 2" class="member-image" style="max-width: 100%; height: 70%;">
+        <h3>Dr. Susmita Roy</h3>
+        <h4>PI</h4>
+        <div class="social-media-icons">
+          <a href="https://www.researchgate.net/profile/Susmita-Roy-3" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="https://scholar.google.com/citations?user=2vfozlQAAAAJ&hl=en" target="_blank"><i class="fab fa-google"></i></a>
+          <a href="https://orcid.org/0000-0001-6411-4347" target="_blank"><i class="fab fa-orcid"></i></a>
+          <a href="https://twitter.com/susmitajanaroy?t=7msHYHVDr42_DAI6F7bRGw&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="../static/images/as.jpg" alt="Team Member 2" class="member-image" style="max-width: 100%; height: 70%;">
+        <h3>Anushree Sinha</h3>
+        <h4>Ph.D.</h4>
+        <div class="social-media-icons">
+          <a href="https://www.researchgate.net/profile/Anushree-Sinha-4" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="https://scholar.google.com/citations?user=wF9tegQAAAAJ&hl=en" target="_blank"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="../static/images/rs.jpg" alt="Team Member 2" class="member-image" style="max-width: 100%; height: 39%;">
+        <h3>Raju Sarkar</h3>
+        <h4>Ph.D.</h4>
+        <div class="social-media-icons">
+          <a href="researchgate_link" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="https://scholar.google.com/citations?user=W3QkqoQAAAAJ&hl=en&authuser=1" target="_blank"><i class="fab fa-google"></i></a>
+          <a href="https://twitter.com/sarkar2966?t=4_5rEKNWLZTbfCku9aDFZw&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="../static/images/javascript.jpg" alt="Team Member 2" class="member-image" style="max-width: 100%; height: 39%;">
+        <h3>Madhav</h3>
+        <h4>BS-MS</h4>
+        <div class="social-media-icons">
+          <a href="researchgate_link" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="google_scholar_link" target="_blank"><i class="fab fa-google"></i></a>
+          <a href="linkedin_link" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="orcid_link" target="_blank"><i class="fab fa-orcid"></i></a>
+          <a href="twitter_link" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="facebook_link" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

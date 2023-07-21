@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#processing-icon').show();  // Show processing icon
+
+            $.ajax({
+                type: 'POST',
+                url: '/process',
+                success: function(data) {
+                    $('#processing-icon').hide();  // Hide processing icon
+                    $('#download-button').show();  // Show download button
+
+                    // Create a Blob from the processed file data
+                    var blob = new Blob([data], {type: 'text/plain'});
+                    var url = window.URL.createObjectURL(blob);
+
+                    // Set download button attributes
+                    $('#download-button').attr('href', url);
+                    $('#download-button').attr('download', 'preprocessed.fasta');
+                },
+                error: function() {
+                    $('#processing-icon').hide();  //Hide processing icon if there was an error
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="processing-icon" style="display: none;">Processing...</div>
+    <a id="download-button" href="#" style="display: none;">Download</a>
+</body>
+</html>
